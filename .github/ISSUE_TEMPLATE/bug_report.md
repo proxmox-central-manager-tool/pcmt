@@ -1,30 +1,42 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: new
-assignees: ''
-
----
-
-**Describe the bug**
-A clear and concise description of what the bug is.
-
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
-
-**Current behavior**
-A clear and concise description of what is currently happening.
-
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots / Code snippets**
-If applicable, add screenshots/code snippets to help explain your problem.
-
-**Additional context**
-Add any other context about the problem here.
+name: Bug Report
+description: Report a bug that is currently in the latest pcmt release.
+labels: ["type: bug"]
+body:
+  - type: dropdown
+    attributes:
+      label: Python version
+      description: What version of Python are you currently running? (if applicable)
+      options:
+        - "3.9"
+        - "3.10"
+        - "3.11"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: How to reproduce this locally
+      description: >
+        Please note here the exact steps you take so that other people can reproduce the same bug and
+        attempt to fix the issue. Ensure you are using the latest release of pykeadhcp and that you are
+        not using any other modules that enhance pykeadhcp itself.
+      placeholder: |
+        1. Logged in
+        2. Added API key to internal account
+        3. Try to get status of a cluster
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What should happen?
+      description: Explain what you think should have happened
+      placeholder: Status of cluster should appear in the UI
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Explain what happened instead
+      placeholder: UI responded with error "could not validate credentials"
+    validations:
+      required: true
