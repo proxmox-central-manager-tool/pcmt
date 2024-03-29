@@ -1,5 +1,6 @@
 ---
 name: Feature Request
+title: "[Feature]: "
 description: Suggest a new feature or enhancement for pcmt
 labels: ["type: feature"]
 body:
