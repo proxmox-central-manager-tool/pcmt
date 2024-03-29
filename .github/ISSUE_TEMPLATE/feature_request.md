@@ -1,23 +1,33 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: new
-assignees: ''
-
----
-
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
-
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
-
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Plan of implementation**
-Describe the basic implementation if you are planning on creating a pull request, if this requires more thought then feel free to open a discussion and link to to the feature request.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
+name: Feature Request
+description: Suggest a new feature or enhancement for pcmt
+labels: ["type: feature"]
+body:
+  - type: dropdown
+    attributes:
+      label: Area
+      options:
+        - Core Implementation
+        - UI
+        - API
+        - Authentication
+        - QEMU
+        - LXC
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Feature/Enhancement you are proposing
+      description: >
+        Describe in detail what feature or enhancement you would like to add to
+        pcmt.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reason for Feature/Enhancement
+      description: >
+        Describe the purpose of this change and what it solves for you or the community.
+    validations:
+      required: true
