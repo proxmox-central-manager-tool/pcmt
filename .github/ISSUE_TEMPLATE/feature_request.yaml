@@ -1,0 +1,33 @@
+---
+name: Feature Request
+description: Suggest a new feature or enhancement for pcmt
+labels: ["type: feature"]
+body:
+  - type: dropdown
+    attributes:
+      label: Area
+      options:
+        - Core Implementation
+        - UI
+        - API
+        - Authentication
+        - QEMU
+        - LXC
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Feature/Enhancement you are proposing
+      description: >
+        Describe in detail what feature or enhancement you would like to add to
+        pcmt.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reason for Feature/Enhancement
+      description: >
+        Describe the purpose of this change and what it solves for you or the community.
+    validations:
+      required: true

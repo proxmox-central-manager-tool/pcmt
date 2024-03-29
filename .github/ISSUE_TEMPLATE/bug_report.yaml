@@ -1,0 +1,42 @@
+---
+name: Bug Report
+description: Report a bug that is currently in the latest pcmt release.
+labels: ["type: bug"]
+body:
+  - type: dropdown
+    attributes:
+      label: Python version
+      description: What version of Python are you currently running? (if applicable)
+      options:
+        - "3.9"
+        - "3.10"
+        - "3.11"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: How to reproduce this locally
+      description: >
+        Please note here the exact steps you take so that other people can reproduce the same bug and
+        attempt to fix the issue. Ensure you are using the latest release of pykeadhcp and that you are
+        not using any other modules that enhance pykeadhcp itself.
+      placeholder: |
+        1. Logged in
+        2. Added API key to internal account
+        3. Try to get status of a cluster
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What should happen?
+      description: Explain what you think should have happened
+      placeholder: Status of cluster should appear in the UI
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Explain what happened instead
+      placeholder: UI responded with error "could not validate credentials"
+    validations:
+      required: true
